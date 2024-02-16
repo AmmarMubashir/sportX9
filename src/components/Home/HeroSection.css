@@ -491,6 +491,10 @@ button {
   .gameType {
     overflow: auto;
   }
+  .teenPatigame img {
+    width: 130px;
+    border-radius: 15px;
+  }
   .cricketScore div {
     height: 25px;
     width: 30px;
