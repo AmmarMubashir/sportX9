@@ -503,9 +503,9 @@ button {
 }
 
 @media (max-width: 448px) {
-  .btn_last {
+  /* .btn_last {
     display: none;
-  }
+  } */
   .navButtonsSection button {
     padding: 9px 6px;
   }

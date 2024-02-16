@@ -85,7 +85,7 @@ const HeroSection = () => {
           <button className="btn_last">
             <IoPersonSharp />
           </button>
-          <button className="btn_last" onClick={changeTheme}>
+          <button onClick={changeTheme}>
             {darkMode ? <MdDarkMode /> : <MdLightMode />}
           </button>
         </div>
