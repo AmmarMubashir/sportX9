@@ -162,7 +162,9 @@ button {
   overflow-x: auto;
 }
 .teenPatigame img {
-  width: 250px;
+  /* width: 250px; */
+  width: 100%;
+  min-height: 70px;
 }
 
 .cricketSection {
