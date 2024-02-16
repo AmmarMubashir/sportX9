@@ -5,7 +5,7 @@ import HeroSection from "./HeroSection";
 const Home = () => {
   return (
     <Fragment>
-      <Navbar />
+      {/* <Navbar /> */}
       <HeroSection />
     </Fragment>
   );

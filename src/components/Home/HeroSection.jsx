@@ -1,4 +1,4 @@
-import React, { Fragment } from "react";
+import React, { Fragment, useEffect, useState } from "react";
 import "./HeroSection.css";
 import heroBg from "../../assets/heroBg.png";
 import exchange from "../../assets/exchange.png";
@@ -38,7 +38,7 @@ import secure from "../../assets/secure.png";
 import facebook from "../../assets/facebook.png";
 import insta from "../../assets/insta.png";
 
-import footerLogo from "../../assets/footerLogo.png";
+import blackLogo from "../../assets/blackLogo.png";
 
 import netbanking from "../../assets/netbanking.png";
 import visa from "../../assets/visa.png";
@@ -49,10 +49,47 @@ import { FaRegPlayCircle } from "react-icons/fa";
 import { MdOutlineSportsCricket } from "react-icons/md";
 import { MdOutlineSportsSoccer } from "react-icons/md";
 import { MdOutlineSportsFootball } from "react-icons/md";
+import { MdSportsTennis } from "react-icons/md";
+
+import { MdSearch } from "react-icons/md";
+import { IoPersonSharp } from "react-icons/io5";
+import { MdDarkMode } from "react-icons/md";
+// import blackLogo from "../../assets/blackLogo.png";
+import { MdLightMode } from "react-icons/md";
 
 const HeroSection = () => {
+  const [darkMode, setDarkMode] = useState(true);
+  const changeTheme = () => {
+    setDarkMode((prevState) => !prevState);
+
+    document.body.style.background = darkMode ? "#000000" : "#ffffff";
+  };
+  document.body.style.background = darkMode ? "#000000" : "#ffffff";
   return (
     <Fragment>
+      <div className="navbar">
+        <div className="inputSection">
+          <input type="text" placeholder="Home" />
+          <MdSearch className="icon" />
+        </div>
+
+        <div className="logoSection">
+          <img src={blackLogo} alt="logo" className="navLogo" />
+          <div className="trapezoid"></div>
+        </div>
+
+        <div className="navButtonsSection">
+          <button className="depositBtn">Deposit</button>
+          <button>Bal. 100.0</button>
+          <button>Exp. 00.0</button>
+          <button className="btn_last">
+            <IoPersonSharp />
+          </button>
+          <button className="btn_last" onClick={changeTheme}>
+            {darkMode ? <MdDarkMode /> : <MdLightMode />}
+          </button>
+        </div>
+      </div>
       <div className="heroBg">
         <img src={heroBg} alt="heroBg" />
       </div>
@@ -60,35 +97,40 @@ const HeroSection = () => {
       <div className="exchange-casino">
         <button className="exchangeBtn">
           <img src={exchange} alt="Exchange btn" />
-          <p>Exchange</p>
+          <p className={darkMode ? "exchangeBtnDark" : "exchangeBtnLight"}>
+            Exchange
+          </p>
         </button>
         <button className="casinoBtn">
           <img src={casino} alt="casino" />
-          <p>Exchange</p>
+          <p className={darkMode ? "casinoBtnDark" : "casinoBtnLight"}>
+            Exchange
+          </p>
         </button>
       </div>
       <div className="gameType">
-        <button>
+        <button className={darkMode ? "gameTypeDark" : "gameTypeLight"}>
           <FaRegPlayCircle />
           <p>In-Play</p>
         </button>
-        <button>
+        <button className={darkMode ? "gameTypeDark" : "gameTypeLight"}>
           <MdOutlineSportsCricket />
           <p>Cricket</p>
         </button>
-        <button>
+        <button className={darkMode ? "gameTypeDark" : "gameTypeLight"}>
           <MdOutlineSportsSoccer />
           <p>Soccer</p>
         </button>
-        <button>
-          <img src={tennis} alt="tennis" />
+        <button className={darkMode ? "gameTypeDark" : "gameTypeLight"}>
+          <MdSportsTennis />
           <p>Tennis</p>
         </button>
-        <button>
+        <button className={darkMode ? "gameTypeDark" : "gameTypeLight"}>
           <img src={virtualSport} alt="virtualSport" />
+
           <p>Virtual Sports</p>
         </button>
-        <button>
+        <button className={darkMode ? "gameTypeDark" : "gameTypeLight"}>
           <MdOutlineSportsFootball />
           <p>Sport-Book</p>
         </button>
@@ -314,12 +356,16 @@ const HeroSection = () => {
         <div className="footerDiv">
           <div className="footerDivInner">
             <div className="footerDiv1">
-              <img src={footerLogo} alt="footerLogo" />
+              <img src={blackLogo} alt="footerLogo" />
               <div className="secureBox">
                 <img src={secure} alt="secure" />
-                <p>100% SAFE Protectedconnection and encrypteddata.</p>
+                <p className={darkMode ? "footerDark" : "footerLight"}>
+                  100% SAFE Protectedconnection and encrypteddata.
+                </p>
               </div>
-              <h3>Rensposible Gaming</h3>
+              <h3 className={darkMode ? "footerDark" : "footerLight"}>
+                Rensposible Gaming
+              </h3>
               <div className="responsibleGame">
                 <img src={responsible1} alt="responsible1" />
                 <img src={responsible2} alt="responsible2" />
@@ -328,7 +374,7 @@ const HeroSection = () => {
               </div>
             </div>
             <div className="footerDiv2">
-              <ul>
+              <ul className={darkMode ? "footerDark" : "footerLight"}>
                 <h3>Company</h3>
                 <li>Getting Started</li>
                 <li>About Us</li>
@@ -339,7 +385,7 @@ const HeroSection = () => {
               </ul>
             </div>
             <div className="footerDiv3">
-              <ul>
+              <ul className={darkMode ? "footerDark" : "footerLight"}>
                 <h3>Company</h3>
                 <li>Cricket</li>
                 <li>Soccer</li>
@@ -350,13 +396,15 @@ const HeroSection = () => {
               </ul>
             </div>
             <div className="footerDiv4">
-              <h3>Follow Us</h3>
+              <h3 className={darkMode ? "footerDark" : "footerLight"}>
+                Follow Us
+              </h3>
               <div className="socialIcon">
                 <img src={facebook} alt="facebook" />
                 <img src={insta} alt="insta" />
               </div>
               <h3>Payment Method</h3>
-              <div className="paymentMethod">
+              <div className={darkMode ? "paymentDark" : "paymentLight"}>
                 <img src={transfer} alt="transfer" />
                 <img src={up} alt="up" />
                 <img src={netbanking} alt="netbanking" />
