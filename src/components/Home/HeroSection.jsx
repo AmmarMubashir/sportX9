@@ -38,6 +38,8 @@ import secure from "../../assets/secure.png";
 import facebook from "../../assets/facebook.png";
 import insta from "../../assets/insta.png";
 
+import footerLogo from "../../assets/footerLogo.png";
+
 import blackLogo from "../../assets/blackLogo.png";
 
 import netbanking from "../../assets/netbanking.png";
@@ -335,19 +337,19 @@ const HeroSection = () => {
           </div>
           <div className="sportCard1">
             <img src={sport2} alt="sport2" />
-            <h3>Teen Patti</h3>
+            <h3>Table Tennis</h3>
           </div>
           <div className="sportCard1">
             <img src={sport3} alt="sport3" />
-            <h3>Teen Patti</h3>
+            <h3>Rugby League</h3>
           </div>
           <div className="sportCard1">
             <img src={sport4} alt="sport4" />
-            <h3>Teen Patti</h3>
+            <h3>Chess</h3>
           </div>
           <div className="sportCard1">
             <img src={sport5} alt="sport5" />
-            <h3>Teen Patti</h3>
+            <h3>Badminton</h3>
           </div>
         </div>
       </div>
@@ -356,7 +358,7 @@ const HeroSection = () => {
         <div className="footerDiv">
           <div className="footerDivInner">
             <div className="footerDiv1">
-              <img src={blackLogo} alt="footerLogo" />
+              <img src={darkMode ? footerLogo : blackLogo} alt="footerLogo" />
               <div className="secureBox">
                 <img src={secure} alt="secure" />
                 <p className={darkMode ? "footerDark" : "footerLight"}>

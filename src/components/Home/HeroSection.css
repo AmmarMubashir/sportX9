@@ -162,9 +162,7 @@ button {
   overflow-x: auto;
 }
 .teenPatigame img {
-  /* width: 250px; */
-  width: 100%;
-  min-height: 70px;
+  width: 300px;
 }
 
 .cricketSection {
@@ -254,7 +252,8 @@ button {
 }
 .providerImg {
   display: grid;
-  grid-template-columns: repeat(6, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  grid-gap: 10px;
 }
 .providerContent,
 .virtualSportContent {
@@ -284,8 +283,8 @@ button {
 
 .virtualSportCards {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  grid-gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  grid-gap: 15px;
 }
 
 .card1 {
@@ -412,6 +411,7 @@ button {
   grid-template-columns: repeat(2, 1fr);
   gap: 15px;
   background: #1c1f24;
+  padding: 15px;
 }
 .paymentLight {
   display: grid;
@@ -420,6 +420,7 @@ button {
   padding: 20px;
   background: #1c1f24;
   border-radius: 10px;
+  padding: 15px;
 }
 .disclaimer {
   text-align: center;
