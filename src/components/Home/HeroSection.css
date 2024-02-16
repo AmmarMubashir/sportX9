@@ -51,6 +51,300 @@
   color: white;
 }
 
+.teenPatigame {
+  width: 90%;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  justify-content: space-between;
+
+  gap: 15px;
+  padding: 25px 20px;
+  overflow-x: auto;
+}
+.teenPatigame img {
+  width: 250px;
+}
+
+.cricketSection {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 90%;
+  min-height: 200px;
+  margin: auto;
+  padding: 20px 0;
+}
+.cricketHeading {
+  width: 100%;
+  background: #272a35;
+  color: white;
+  display: flex;
+  justify-content: left;
+  gap: 5px;
+  padding: 20px;
+  border-radius: 20px;
+}
+.cricketContent {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  /* min-height: 200px; */
+  /* background-color: white; */
+}
+.cricketContent1 {
+  display: flex;
+  /* flex-wrap: wrap; */
+  gap: 10px;
+  /* background: white; */
+}
+.inPlay {
+  width: 55%;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  /* background: red; */
+}
+.inPlay p {
+  color: #ebc430;
+}
+.inPlayBtn {
+  width: 80px;
+  height: 30px;
+  padding: 5px 8px;
+  background-color: #03a155;
+  color: white;
+  border-radius: 5px;
+}
+
+.cricketScore {
+  display: flex;
+  gap: 10px;
+  width: 40%;
+  justify-content: flex-end;
+  /* background: green; */
+}
+.cricketScore div {
+  height: 35px;
+  width: 60px;
+  padding: 5px 8px;
+  color: black;
+  font-weight: bold;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.blueScore {
+  background: #9db0e0;
+}
+.pinkScore {
+  background: #e88fd0;
+}
+.topProvider,
+.virtualSports,
+.sportBook {
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  margin: auto;
+  padding: 20px 0;
+}
+.providerImg {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+}
+.providerContent,
+.virtualSportContent {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.providerContent p,
+.virtualSportContent p,
+.sportBookContent p {
+  font-size: 1.2rem;
+  color: #ebc430;
+  font-weight: bold;
+}
+.providerImg img {
+  width: 100%;
+}
+
+.virtualSportContent,
+.sportBookContent {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 10px;
+  padding: 20px;
+}
+
+.virtualSportCards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-gap: 20px;
+}
+
+.card1 {
+  width: 100%;
+}
+.card1 img {
+  width: 100%;
+}
+.card1 div:last-child {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #a2a3a5;
+  padding: 5px;
+}
+
+.sportBook .sportCard {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-gap: 20px;
+}
+.sportCard1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  gap: 10px;
+  /* height: 150px;
+  width: 150px; */
+  padding: 20px 0;
+  border: 1px solid #ec6618;
+  background-color: #272a35;
+  border-radius: 20px;
+}
+.sportCard1 h3 {
+  font-size: 1.2rem;
+}
+.sportCard1 img {
+  width: 80px;
+}
+
+/* .footer {
+  
+} */
+
+.footerDiv {
+  border-top: 1px solid #ebc430;
+  border-bottom: 1px solid #ebc430;
+}
+.footerDivInner {
+  width: 90%;
+  /* border-top: 1px solid #ebc430;
+  border-bottom: 1px solid #ebc430; */
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-gap: 20px;
+  padding: 20px 20px;
+  margin: auto;
+}
+.footerDiv1 {
+  color: #ebc430;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.secureBox {
+  display: flex;
+  gap: 5px;
+  color: white;
+}
+.secureBox p {
+  font-size: 1rem;
+}
+.responsibleGame {
+  display: flex;
+  gap: 2px;
+}
+.responsibleGame img {
+  width: 40px;
+}
+.footerDiv2,
+.footerDiv3 {
+  padding-top: 40px;
+}
+.footerDiv2 ul,
+.footerDiv3 ul {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  color: #ebc430;
+  list-style: none;
+}
+.footerDiv2 ul h3,
+.footerDiv3 ul h3 {
+  margin-bottom: 25px;
+}
+.footerDiv2 ul li,
+.footerDiv3 ul li {
+  color: white;
+}
+
+.footerDiv4 {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding-top: 40px;
+}
+
+.footerDiv4 h3 {
+  color: #ebc430;
+}
+.socialIcon {
+  display: flex;
+  gap: 15px;
+}
+.paymentMethod {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+}
+.disclaimer {
+  text-align: center;
+  color: white;
+  font-size: 12px;
+  width: 60%;
+  margin: auto;
+  padding: 20px 0;
+}
+.copyRight {
+  width: 100%;
+  background: #353535;
+  text-align: center;
+  color: white;
+  padding: 20px 0;
+}
+.copyRight p {
+  width: 85%;
+  margin: auto;
+}
+.copyRight p span {
+  color: #ebc430;
+}
+
+@media (max-width: 815px) {
+  .cricketContent1 {
+    flex-direction: column;
+  }
+  .inPlay {
+    width: 100%;
+  }
+  .inPlay p {
+    font-size: 12px;
+  }
+  .cricketScore {
+    width: 100%;
+    justify-content: flex-start;
+  }
+}
+
 @media (max-width: 712px) {
   .heroBg img {
     width: 90%;
@@ -58,6 +352,18 @@
   }
   .gameType {
     overflow: auto;
+  }
+  .cricketScore div {
+    height: 25px;
+    width: 30px;
+    padding: 5px 8px;
+    color: black;
+    font-weight: bold;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
   }
 }
 
@@ -77,5 +383,11 @@
   .exchangeBtn p,
   .casinoBtn p {
     font-size: 1rem;
+  }
+  .inPlay p {
+    font-size: 9px;
+  }
+  .disclaimer {
+    width: 80%;
   }
 }
