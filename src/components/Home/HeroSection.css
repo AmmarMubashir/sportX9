@@ -1,0 +1,81 @@
+.heroBg {
+  width: 100%;
+  min-height: 350px;
+  padding-top: 25px;
+  padding-bottom: 25px;
+}
+
+.heroBg img {
+  width: 90%;
+  height: 350px;
+  display: block;
+  margin: auto;
+  cursor: pointer;
+}
+.exchange-casino {
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+  margin: auto;
+}
+.exchangeBtn,
+.casinoBtn {
+  width: 49%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3px;
+  border: 1px solid #ec6618;
+}
+.exchangeBtn img,
+.casinoBtn img {
+  width: 40px;
+}
+.exchangeBtn p,
+.casinoBtn p {
+  font-size: 1.2rem;
+}
+.gameType {
+  width: 90%;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 15px;
+  margin: 25px auto;
+}
+.gameType button {
+  border: 1px solid #ec6618;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  color: white;
+}
+
+@media (max-width: 712px) {
+  .heroBg img {
+    width: 90%;
+    height: 250px;
+  }
+  .gameType {
+    overflow: auto;
+  }
+}
+
+@media (max-width: 448px) {
+  .heroBg {
+    min-height: 200px;
+    padding-top: 20px;
+    padding-bottom: 0;
+  }
+  .heroBg img {
+    height: 150px;
+  }
+  .exchangeBtn img,
+  .casinoBtn img {
+    width: 30px;
+  }
+  .exchangeBtn p,
+  .casinoBtn p {
+    font-size: 1rem;
+  }
+}

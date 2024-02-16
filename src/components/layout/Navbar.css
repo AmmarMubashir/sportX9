@@ -1,0 +1,114 @@
+button {
+  padding: 10px 15px;
+  border-radius: 20px;
+  outline: none;
+  border: 1px solid #ebc430;
+  cursor: pointer;
+  color: #ebc430;
+  background: none;
+  font-weight: bold;
+}
+
+.navbar {
+  width: 100%;
+  height: 79px;
+  background-color: #272a35;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+.inputSection {
+  width: 20%;
+  display: flex;
+  align-items: center;
+}
+.inputSection input {
+  height: 40px;
+  width: 80%;
+  padding: 15px 45px;
+  border: none;
+  background: #1c1f24;
+  border-radius: 20px;
+  color: #ebc430;
+}
+.inputSection .icon {
+  color: #ebc430;
+  font-size: 1.4rem;
+  font-weight: bold;
+  position: relative;
+  left: -45px;
+  cursor: pointer;
+}
+
+.logoSection {
+  width: 20%;
+  position: relative;
+  /* display: flex; */
+}
+.logoSection img {
+  width: 60%;
+  position: relative;
+  /* top: 20px;
+  z-index: 10; */
+  margin-left: 10px;
+}
+/* .trapezoid {
+  background: #272a35;
+  width: 70%;
+  height: 300px;
+  position: absolute;
+  top: 115px;
+  left: 0;
+  clip-path: polygon(0 0, 100% 0, 65% 13%, 29% 13%);
+} */
+
+.navButtonsSection {
+  width: 40%;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.depositBtn {
+  background-color: #ebc430;
+  color: black;
+}
+
+@media (max-width: 960px) {
+  .inputSection {
+    width: 25%;
+  }
+  .navButtonsSection {
+    width: 55%;
+  }
+}
+
+@media (max-width: 712px) {
+  .inputSection {
+    display: none;
+  }
+  .navButtonsSection button {
+    font-size: 10px;
+  }
+  .navButtonsSection {
+    width: 80%;
+    justify-content: right;
+    gap: 5px;
+  }
+  .logoSection img {
+    width: 90%;
+  }
+}
+
+@media (max-width: 442px) {
+  .btn_last {
+    display: none;
+  }
+  .navButtonsSection button {
+    padding: 9px 6px;
+  }
+  .logoSection img {
+    width: 100%;
+  }
+}
