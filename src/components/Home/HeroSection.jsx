@@ -81,7 +81,7 @@ const HeroSection = () => {
         </div>
 
         <div className="navButtonsSection">
-          <button className="depositBtn">Deposit</button>
+          <button>Deposit</button>
           <button>Bal. 100.0</button>
           <button>Exp. 00.0</button>
           <button className="btn_last">

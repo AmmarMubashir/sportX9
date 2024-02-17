@@ -78,11 +78,18 @@ button {
   display: flex;
   justify-content: space-evenly;
 }
+.navButtonsSection button {
+  transition: all 0.5s ease;
+}
 
-.depositBtn {
+.navButtonsSection button:hover {
   background-color: #ebc430;
   color: black;
 }
+/* .depositBtn {
+  background-color: #ebc430;
+  color: black;
+} */
 
 .heroBg {
   width: 100%;
@@ -263,7 +270,7 @@ button {
 .providerContent,
 .virtualSportContent {
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
 }
 .providerContent p,
