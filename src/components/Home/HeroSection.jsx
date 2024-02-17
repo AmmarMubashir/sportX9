@@ -299,7 +299,7 @@ const HeroSection = () => {
             <div>
               <img src={visual1} alt="visual1" />
             </div>
-            <div>
+            <div className="card1HP">
               <h3>Football</h3>
               <p>Play Now</p>
             </div>
@@ -308,7 +308,7 @@ const HeroSection = () => {
             <div>
               <img src={visual2} alt="visual2" />
             </div>
-            <div>
+            <div className="card1HP">
               <h3>Tennis</h3>
               <p>Play Now</p>
             </div>
@@ -317,7 +317,7 @@ const HeroSection = () => {
             <div>
               <img src={visual3} alt="visual3" />
             </div>
-            <div>
+            <div className="card1HP">
               <h3>Cricket</h3>
               <p>Play Now</p>
             </div>
@@ -326,7 +326,7 @@ const HeroSection = () => {
             <div>
               <img src={visual4} alt="visual4" />
             </div>
-            <div>
+            <div className="card1HP">
               <h3>Virtual Sports</h3>
               <p>Play Now</p>
             </div>
