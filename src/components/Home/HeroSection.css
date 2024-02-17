@@ -256,7 +256,8 @@ button {
 }
 .providerImg {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  /* grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); */
+  grid-template-columns: repeat(6, 1fr);
   grid-gap: 10px;
 }
 .providerContent,
@@ -286,13 +287,26 @@ button {
 }
 
 .virtualSportCards {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  /* display: grid;
+  grid-template-columns: repeat(4, 1fr); */
+  /* grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); */
+  /* display: flex;
   grid-gap: 15px;
+  overflow-x: scroll; */
+  width: 90%;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  justify-content: space-between;
+
+  gap: 15px;
+  padding: 25px 0;
+  overflow-x: auto;
 }
 
 .card1 {
   width: 100%;
+  /* width: 35%; */
   background: rgba(236, 102, 24, 0.3);
   border-radius: 10px;
   padding: 3px;
@@ -315,7 +329,7 @@ button {
   border-radius: 0 0 10px 10px;
 }
 .card1HP h3 {
-  font-size: 18px;
+  font-size: 12px;
 }
 .card1HP p {
   font-size: 12px;
@@ -323,8 +337,10 @@ button {
 
 .sportBook .sportCard {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  grid-gap: 20px;
+  /* grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); */
+  grid-template-columns: repeat(5, 1fr);
+  grid-gap: 10px;
+  overflow: auto;
 }
 .sportCard1 {
   display: flex;
@@ -332,9 +348,9 @@ button {
   justify-content: center;
   align-items: center;
   color: white;
-  gap: 10px;
-  /* height: 150px;
-  width: 150px; */
+  gap: 5px;
+  height: 165px;
+  width: 165px;
   padding: 20px 0;
   border: 1px solid #ec6618;
   background-color: #272a35;
@@ -483,13 +499,19 @@ button {
   .inPlay p {
     font-size: 12px;
   }
+  .card1HP h3 {
+    font-size: 10px;
+  }
+  .card1HP p {
+    font-size: 9px;
+  }
   .cricketScore {
     width: 100%;
     justify-content: flex-start;
   }
 }
 
-@media (max-width: 712px) {
+@media (max-width: 719px) {
   .inputSection {
     display: none;
   }
@@ -520,9 +542,23 @@ button {
     width: 130px;
     border-radius: 15px;
   }
-  .card1HP h3,
-  .card1HP p {
+
+  .sportCard1 {
+    width: 120px;
+    height: 120px;
+  }
+  .sportCard1 img {
+    width: 50px;
+  }
+  .sportCard1 h3 {
     font-size: 12px;
+  }
+  .card1HP h3 {
+    font-size: 7px;
+  }
+
+  .card1HP p {
+    font-size: 6px;
   }
   .cricketScore div {
     height: 25px;
@@ -538,6 +574,11 @@ button {
   }
 }
 
+@media (max-width: 484px) {
+  .card1 {
+    width: 140px;
+  }
+}
 @media (max-width: 448px) {
   /* .btn_last {
     display: none;
@@ -566,6 +607,9 @@ button {
   }
   .inPlay p {
     font-size: 9px;
+  }
+  .card1 {
+    width: 120px;
   }
   .disclaimer {
     width: 80%;

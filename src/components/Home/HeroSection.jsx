@@ -4,7 +4,6 @@ import whiteLogo from "../../assets/whiteLogo.png";
 import heroBg from "../../assets/heroBg.png";
 import exchange from "../../assets/exchange.png";
 import casino from "../../assets/live.png";
-import tennis from "../../assets/v.png";
 import teenPati1 from "../../assets/teenpati1.png";
 import teenPati2 from "../../assets/teenpati2.png";
 import teenPati3 from "../../assets/teenpati3.png";
