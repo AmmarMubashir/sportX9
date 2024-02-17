@@ -1,5 +1,6 @@
 import React, { Fragment, useEffect, useState } from "react";
 import "./HeroSection.css";
+import whiteLogo from "../../assets/whiteLogo.png";
 import heroBg from "../../assets/heroBg.png";
 import exchange from "../../assets/exchange.png";
 import casino from "../../assets/live.png";
@@ -76,7 +77,7 @@ const HeroSection = () => {
         </div>
 
         <div className="logoSection">
-          <img src={blackLogo} alt="logo" className="navLogo" />
+          <img src={whiteLogo} alt="logo" className="navLogo" />
           <div className="trapezoid"></div>
         </div>
 
@@ -138,10 +139,18 @@ const HeroSection = () => {
         </button>
       </div>
       <div className="teenPatigame">
-        <img src={teenPati1} alt="teenPati1" />
-        <img src={teenPati2} alt="teenPati2" />
-        <img src={teenPati3} alt="teenPati3" />
-        <img src={teenPati4} alt="teenPati4" />
+        <div>
+          <img src={teenPati1} alt="teenPati1" />
+        </div>
+        <div>
+          <img src={teenPati2} alt="teenPati2" />
+        </div>
+        <div>
+          <img src={teenPati3} alt="teenPati3" />
+        </div>
+        <div>
+          <img src={teenPati4} alt="teenPati4" />
+        </div>
       </div>
 
       <div className="cricketSection">

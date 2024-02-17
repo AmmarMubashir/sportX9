@@ -161,7 +161,11 @@ button {
   padding: 25px 20px;
   overflow-x: auto;
 }
-.teenPatigame img {
+.teenPatigame div {
+  padding-bottom: 30px;
+  background-color: red;
+}
+.teenPatigame div img {
   width: 300px;
 }
 
@@ -289,16 +293,25 @@ button {
 
 .card1 {
   width: 100%;
+  padding: 3px;
+  border-radius: 10px;
+  /* border: 1px ridge #ec6618; */
+  background: rgba(236, 102, 24, 0.4);
 }
 .card1 img {
+  border-radius: 10px 10px 0 0;
   width: 100%;
 }
 .card1 div:last-child {
+  margin-top: -3px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  background: #272a35;
   color: #a2a3a5;
   padding: 5px;
+  position: relative;
+  z-index: 10;
 }
 
 .sportBook .sportCard {
@@ -491,7 +504,11 @@ button {
   .gameType {
     overflow: auto;
   }
-  .teenPatigame img {
+  .teenPatigame div {
+    padding-bottom: 30px;
+    background: red;
+  }
+  .teenPatigame div img {
     width: 130px;
     border-radius: 15px;
   }
