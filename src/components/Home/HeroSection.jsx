@@ -61,6 +61,30 @@ import { MdLightMode } from "react-icons/md";
 
 const HeroSection = () => {
   const [darkMode, setDarkMode] = useState(true);
+  const [screenSize, setScreenSize] = useState("");
+  useEffect(() => {
+    function handleResize() {
+      const width = window.innerWidth;
+      let newSize = "";
+
+      if (width < 768) {
+        newSize = "Small";
+      }
+
+      setScreenSize(newSize);
+    }
+
+    // Listen for resize events
+    window.addEventListener("resize", handleResize);
+
+    // Initial call to set screen size
+    handleResize();
+
+    // Cleanup the event listener on component unmount
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
   const changeTheme = () => {
     setDarkMode((prevState) => !prevState);
 
@@ -168,142 +192,317 @@ const HeroSection = () => {
         </div>
       </div>
 
-      <div className="cricketSection">
-        <div className="cricketHeading">
-          <MdOutlineSportsCricket />
-          <p>Cricket</p>
-        </div>
-        <div className="cricketContent">
-          <div className="cricketContent1">
-            <div className="inPlay">
-              <div className="inPlayBtn">In-Play</div>
-              <p className={darkMode ? "scoreDark" : "scoreLight"}>
-                Twenty20 Big Bash
-              </p>
+      {screenSize === "Small" ? (
+        <Fragment>
+          <div className="cricketSection">
+            <div className="cricketHeading">
+              <MdOutlineSportsCricket />
+              <p>Cricket</p>
             </div>
-            <div className="cricketScore">
-              <div className="blueScore">1.05</div>
-              <div className="pinkScore">1.05</div>
-              <div className="blueScore">1.05</div>
-              <div className="pinkScore">-</div>
-              <div className="blueScore">1.05</div>
-              <div className="pinkScore">1.05</div>
-            </div>
-          </div>
-          <div className="cricketContent1">
-            <div className="inPlay">
-              <div className="inPlayBtn">In-Play</div>
-              <p className={darkMode ? "scoreDark" : "scoreLight"}>
-                Canterbury Magicians Woman Vs Wellington Blaze Wome
-              </p>
-            </div>
-            <div className="cricketScore">
-              <div className="blueScore">1.05</div>
-              <div className="pinkScore">1.05</div>
-              <div className="blueScore">1.05</div>
-              <div className="pinkScore">-</div>
-              <div className="blueScore">1.05</div>
-              <div className="pinkScore">1.05</div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div className="cricketSection">
-        <div className="cricketHeading">
-          <MdSportsTennis />
-          <p>Tennis</p>
-        </div>
-        <div className="cricketContent">
-          <div className="cricketContent1">
-            <div className="inPlay">
-              <div className="inPlayBtn">In-Play</div>
-              <p className={darkMode ? "scoreDark" : "scoreLight"}>
-                Canterbury Magicians Woman Vs Wellington Blaze Wome
-              </p>
-            </div>
-            <div className="cricketScore">
-              <div className="blueScore">1.05</div>
-              <div className="pinkScore">1.05</div>
-              <div className="blueScore">1.05</div>
-              <div className="pinkScore">-</div>
-              <div className="blueScore">1.05</div>
-              <div className="pinkScore">1.05</div>
+            <div className="cricketContent">
+              <div className="cricketContent1">
+                <div className="inPlay">
+                  <div className="inPlayBtn">In-Play</div>
+                  <p className={darkMode ? "scoreDark" : "scoreLight"}>
+                    Twenty20 Big Bash
+                  </p>
+                </div>
+                <div className="cricketScore">
+                  <div className="blueScore">--</div>
+                  <div className="pinkScore">--</div>
+                  <div className="blueScore">--</div>
+                  <div className="pinkScore">--</div>
+                  <div className="blueScore">--</div>
+                  <div className="pinkScore">--</div>
+                </div>
+              </div>
+              <div className="cricketContent1">
+                <div className="inPlay">
+                  <div className="inPlayBtn">In-Play</div>
+                  <p className={darkMode ? "scoreDark" : "scoreLight"}>
+                    Canterbury Magicians Woman Vs Wellington Blaze Wome
+                  </p>
+                </div>
+                <div className="cricketScore">
+                  <div className="blueScore">--</div>
+                  <div className="pinkScore">--</div>
+                  <div className="blueScore">--</div>
+                  <div className="pinkScore">--</div>
+                  <div className="blueScore">--</div>
+                  <div className="pinkScore">--</div>
+                </div>
+              </div>
             </div>
           </div>
-          <div className="cricketContent1">
-            <div className="inPlay">
-              <div className="inPlayBtn">In-Play</div>
-              <p className={darkMode ? "scoreDark" : "scoreLight"}>
-                Canterbury Magicians Woman Vs Wellington Blaze Wome
-              </p>
+          <div className="cricketSection">
+            <div className="cricketHeading">
+              <MdSportsTennis />
+              <p>Tennis</p>
             </div>
-            <div className="cricketScore">
-              <div className="blueScore">1.05</div>
-              <div className="pinkScore">1.05</div>
-              <div className="blueScore">1.05</div>
-              <div className="pinkScore">-</div>
-              <div className="blueScore">1.05</div>
-              <div className="pinkScore">1.05</div>
-            </div>
-          </div>
-          <div className="cricketContent1">
-            <div className="inPlay">
-              <div className="inPlayBtn">In-Play</div>
-              <p className={darkMode ? "scoreDark" : "scoreLight"}>
-                Canterbury Magicians Woman Vs Wellington Blaze Wome
-              </p>
-            </div>
-            <div className="cricketScore">
-              <div className="blueScore">1.05</div>
-              <div className="pinkScore">1.05</div>
-              <div className="blueScore">1.05</div>
-              <div className="pinkScore">-</div>
-              <div className="blueScore">1.05</div>
-              <div className="pinkScore">1.05</div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div className="cricketSection">
-        <div className="cricketHeading">
-          <MdOutlineSportsSoccer />
-          <p>Soccer</p>
-        </div>
-        <div className="cricketContent">
-          <div className="cricketContent1">
-            <div className="inPlay">
-              <div className="inPlayBtn">In-Play</div>
-              <p className={darkMode ? "scoreDark" : "scoreLight"}>
-                Canterbury Magicians Woman Vs Wellington Blaze Wome
-              </p>
-            </div>
-            <div className="cricketScore">
-              <div className="blueScore">1.05</div>
-              <div className="pinkScore">1.05</div>
-              <div className="blueScore">1.05</div>
-              <div className="pinkScore">-</div>
-              <div className="blueScore">1.05</div>
-              <div className="pinkScore">1.05</div>
-            </div>
-          </div>
-          <div className="cricketContent1">
-            <div className="inPlay">
-              <div className="inPlayBtn">In-Play</div>
-              <p className={darkMode ? "scoreDark" : "scoreLight"}>
-                Canterbury Magicians Woman Vs Wellington Blaze Wome
-              </p>
-            </div>
-            <div className="cricketScore">
-              <div className="blueScore">1.05</div>
-              <div className="pinkScore">1.05</div>
-              <div className="blueScore">1.05</div>
-              <div className="pinkScore">-</div>
-              <div className="blueScore">1.05</div>
-              <div className="pinkScore">1.05</div>
+            <div className="cricketContent">
+              <div className="cricketContent1">
+                <div className="inPlay">
+                  <div className="inPlayBtn">In-Play</div>
+                  <p className={darkMode ? "scoreDark" : "scoreLight"}>
+                    Canterbury Magicians Woman Vs Wellington Blaze Wome
+                  </p>
+                </div>
+                <div className="cricketScore">
+                  <div className="blueScore">--</div>
+                  <div className="pinkScore">--</div>
+                  <div className="blueScore">--</div>
+                  <div className="pinkScore">--</div>
+                  <div className="blueScore">--</div>
+                  <div className="pinkScore">--</div>
+                </div>
+              </div>
+              <div className="cricketContent1">
+                <div className="inPlay">
+                  <div className="inPlayBtn">In-Play</div>
+                  <p className={darkMode ? "scoreDark" : "scoreLight"}>
+                    Canterbury Magicians Woman Vs Wellington Blaze Wome
+                  </p>
+                </div>
+                <div className="cricketScore">
+                  <div className="blueScore">--</div>
+                  <div className="pinkScore">--</div>
+                  <div className="blueScore">--</div>
+                  <div className="pinkScore">--</div>
+                  <div className="blueScore">--</div>
+                  <div className="pinkScore">--</div>
+                </div>
+              </div>
+              <div className="cricketContent1">
+                <div className="inPlay">
+                  <div className="inPlayBtn">In-Play</div>
+                  <p className={darkMode ? "scoreDark" : "scoreLight"}>
+                    Canterbury Magicians Woman Vs Wellington Blaze Wome
+                  </p>
+                </div>
+                <div className="cricketScore">
+                  <div className="blueScore">--</div>
+                  <div className="pinkScore">--</div>
+                  <div className="blueScore">--</div>
+                  <div className="pinkScore">--</div>
+                  <div className="blueScore">--</div>
+                  <div className="pinkScore">--</div>
+                </div>
+              </div>
             </div>
           </div>
-        </div>
-      </div>
+          <div className="cricketSection">
+            <div className="cricketHeading">
+              <MdOutlineSportsSoccer />
+              <p>Soccer</p>
+            </div>
+            <div className="cricketContent">
+              <div className="cricketContent1">
+                <div className="inPlay">
+                  <div className="inPlayBtn">In-Play</div>
+                  <p className={darkMode ? "scoreDark" : "scoreLight"}>
+                    Canterbury Magicians Woman Vs Wellington Blaze Wome
+                  </p>
+                </div>
+                <div className="cricketScore">
+                  <div className="blueScore">--</div>
+                  <div className="pinkScore">--</div>
+                  <div className="blueScore">--</div>
+                  <div className="pinkScore">--</div>
+                  <div className="blueScore">--</div>
+                  <div className="pinkScore">--</div>
+                </div>
+              </div>
+              <div className="cricketContent1">
+                <div className="inPlay">
+                  <div className="inPlayBtn">In-Play</div>
+                  <p className={darkMode ? "scoreDark" : "scoreLight"}>
+                    Canterbury Magicians Woman Vs Wellington Blaze Wome
+                  </p>
+                </div>
+                <div className="cricketScore">
+                  <div className="blueScore">--</div>
+                  <div className="pinkScore">--</div>
+                  <div className="blueScore">--</div>
+                  <div className="pinkScore">--</div>
+                  <div className="blueScore">--</div>
+                  <div className="pinkScore">--</div>
+                </div>
+              </div>
+              <div className="cricketContent1">
+                <div className="inPlay">
+                  <div className="inPlayBtn">In-Play</div>
+                  <p className={darkMode ? "scoreDark" : "scoreLight"}>
+                    Canterbury Magicians Woman Vs Wellington Blaze Wome
+                  </p>
+                </div>
+                <div className="cricketScore">
+                  <div className="blueScore">--</div>
+                  <div className="pinkScore">--</div>
+                  <div className="blueScore">--</div>
+                  <div className="pinkScore">--</div>
+                  <div className="blueScore">--</div>
+                  <div className="pinkScore">--</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </Fragment>
+      ) : (
+        <Fragment>
+          <div className="cricketSection">
+            <div className="cricketHeading">
+              <MdOutlineSportsCricket />
+              <p>Cricket</p>
+            </div>
+            <div className="cricketContent">
+              <div className="cricketContent1">
+                <div className="inPlay">
+                  <div className="inPlayBtn">In-Play</div>
+                  <p className={darkMode ? "scoreDark" : "scoreLight"}>
+                    Twenty20 Big Bash
+                  </p>
+                </div>
+                <div className="cricketScore">
+                  <div className="blueScore">1.05</div>
+                  <div className="pinkScore">1.05</div>
+                  <div className="blueScore">1.05</div>
+                  <div className="pinkScore">-</div>
+                  <div className="blueScore">1.05</div>
+                  <div className="pinkScore">1.05</div>
+                </div>
+              </div>
+              <div className="cricketContent1">
+                <div className="inPlay">
+                  <div className="inPlayBtn">In-Play</div>
+                  <p className={darkMode ? "scoreDark" : "scoreLight"}>
+                    Canterbury Magicians Woman Vs Wellington Blaze Wome
+                  </p>
+                </div>
+                <div className="cricketScore">
+                  <div className="blueScore">1.05</div>
+                  <div className="pinkScore">1.05</div>
+                  <div className="blueScore">-</div>
+                  <div className="pinkScore">-</div>
+                  <div className="blueScore">1.05</div>
+                  <div className="pinkScore">1.05</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="cricketSection">
+            <div className="cricketHeading">
+              <MdSportsTennis />
+              <p>Tennis</p>
+            </div>
+            <div className="cricketContent">
+              <div className="cricketContent1">
+                <div className="inPlay">
+                  <div className="inPlayBtn">In-Play</div>
+                  <p className={darkMode ? "scoreDark" : "scoreLight"}>
+                    Canterbury Magicians Woman Vs Wellington Blaze Wome
+                  </p>
+                </div>
+                <div className="cricketScore">
+                  <div className="blueScore">1.05</div>
+                  <div className="pinkScore">1.05</div>
+                  <div className="blueScore">1.05</div>
+                  <div className="pinkScore">-</div>
+                  <div className="blueScore">1.05</div>
+                  <div className="pinkScore">1.05</div>
+                </div>
+              </div>
+              <div className="cricketContent1">
+                <div className="inPlay">
+                  <div className="inPlayBtn">In-Play</div>
+                  <p className={darkMode ? "scoreDark" : "scoreLight"}>
+                    Canterbury Magicians Woman Vs Wellington Blaze Wome
+                  </p>
+                </div>
+                <div className="cricketScore">
+                  <div className="blueScore">1.05</div>
+                  <div className="pinkScore">1.05</div>
+                  <div className="blueScore">-</div>
+                  <div className="pinkScore">-</div>
+                  <div className="blueScore">1.05</div>
+                  <div className="pinkScore">1.05</div>
+                </div>
+              </div>
+              <div className="cricketContent1">
+                <div className="inPlay">
+                  <div className="inPlayBtn">In-Play</div>
+                  <p className={darkMode ? "scoreDark" : "scoreLight"}>
+                    Canterbury Magicians Woman Vs Wellington Blaze Wome
+                  </p>
+                </div>
+                <div className="cricketScore">
+                  <div className="blueScore">1.05</div>
+                  <div className="pinkScore">1.05</div>
+                  <div className="blueScore">1.05</div>
+                  <div className="pinkScore">-</div>
+                  <div className="blueScore">1.05</div>
+                  <div className="pinkScore">1.05</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="cricketSection">
+            <div className="cricketHeading">
+              <MdOutlineSportsSoccer />
+              <p>Soccer</p>
+            </div>
+            <div className="cricketContent">
+              <div className="cricketContent1">
+                <div className="inPlay">
+                  <div className="inPlayBtn">In-Play</div>
+                  <p className={darkMode ? "scoreDark" : "scoreLight"}>
+                    Canterbury Magicians Woman Vs Wellington Blaze Wome
+                  </p>
+                </div>
+                <div className="cricketScore">
+                  <div className="blueScore">1.05</div>
+                  <div className="pinkScore">1.05</div>
+                  <div className="blueScore">1.05</div>
+                  <div className="pinkScore">-</div>
+                  <div className="blueScore">1.05</div>
+                  <div className="pinkScore">1.05</div>
+                </div>
+              </div>
+              <div className="cricketContent1">
+                <div className="inPlay">
+                  <div className="inPlayBtn">In-Play</div>
+                  <p className={darkMode ? "scoreDark" : "scoreLight"}>
+                    Canterbury Magicians Woman Vs Wellington Blaze Wome
+                  </p>
+                </div>
+                <div className="cricketScore">
+                  <div className="blueScore">1.05</div>
+                  <div className="pinkScore">1.05</div>
+                  <div className="blueScore">-</div>
+                  <div className="pinkScore">-</div>
+                  <div className="blueScore">1.05</div>
+                  <div className="pinkScore">1.05</div>
+                </div>
+              </div>
+              <div className="cricketContent1">
+                <div className="inPlay">
+                  <div className="inPlayBtn">In-Play</div>
+                  <p className={darkMode ? "scoreDark" : "scoreLight"}>
+                    Canterbury Magicians Woman Vs Wellington Blaze Wome
+                  </p>
+                </div>
+                <div className="cricketScore">
+                  <div className="blueScore">1.05</div>
+                  <div className="pinkScore">1.05</div>
+                  <div className="blueScore">1.05</div>
+                  <div className="pinkScore">-</div>
+                  <div className="blueScore">1.05</div>
+                  <div className="pinkScore">1.05</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </Fragment>
+      )}
       <div className="topProvider">
         <div className="providerContent">
           <img src={topProvider} alt="topProvider" />
