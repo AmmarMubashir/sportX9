@@ -97,45 +97,61 @@ const HeroSection = () => {
       </div>
 
       <div className="exchange-casino">
-        <button className="exchangeBtn">
-          <img src={exchange} alt="Exchange btn" />
-          <p className={darkMode ? "exchangeBtnDark" : "exchangeBtnLight"}>
-            Exchange
-          </p>
-        </button>
-        <button className="casinoBtn">
-          <img src={casino} alt="casino" />
-          <p className={darkMode ? "casinoBtnDark" : "casinoBtnLight"}>
-            Exchange
-          </p>
-        </button>
+        <div className={darkMode ? "exchangeBtnDark" : "exchangeBtnLight"}>
+          <button className="exchangeBtn">
+            <img src={exchange} alt="Exchange btn" />
+            <p className={darkMode ? "exchangeBtnDark" : "exchangeBtnLight"}>
+              Exchange
+            </p>
+          </button>
+        </div>
+        <div className={darkMode ? "exchangeBtnDark" : "exchangeBtnLight"}>
+          <button className="casinoBtn">
+            <img src={exchange} alt="casino" />
+            <p className={darkMode ? "casinoBtnDark" : "casinoBtnLight"}>
+              Live Casino
+            </p>
+          </button>
+        </div>
       </div>
       <div className="gameType">
-        <button className={darkMode ? "gameTypeDark" : "gameTypeLight"}>
-          <FaRegPlayCircle />
-          <p>In-Play</p>
-        </button>
-        <button className={darkMode ? "gameTypeDark" : "gameTypeLight"}>
-          <MdOutlineSportsCricket />
-          <p>Cricket</p>
-        </button>
-        <button className={darkMode ? "gameTypeDark" : "gameTypeLight"}>
-          <MdOutlineSportsSoccer />
-          <p>Soccer</p>
-        </button>
-        <button className={darkMode ? "gameTypeDark" : "gameTypeLight"}>
-          <MdSportsTennis />
-          <p>Tennis</p>
-        </button>
-        <button className={darkMode ? "gameTypeDark" : "gameTypeLight"}>
-          <img src={virtualSport} alt="virtualSport" />
+        <div className={darkMode ? "gameTypeDark" : "gameTypeLight"}>
+          <button className={darkMode ? "gameTypeDark" : "gameTypeLight"}>
+            <FaRegPlayCircle />
+            <p>In-Play</p>
+          </button>
+        </div>
+        <div>
+          <button className={darkMode ? "gameTypeDark" : "gameTypeLight"}>
+            <MdOutlineSportsCricket />
+            <p>Cricket</p>
+          </button>
+        </div>
+        <div>
+          <button className={darkMode ? "gameTypeDark" : "gameTypeLight"}>
+            <MdOutlineSportsSoccer />
+            <p>Soccer</p>
+          </button>
+        </div>
+        <div>
+          <button className={darkMode ? "gameTypeDark" : "gameTypeLight"}>
+            <MdSportsTennis />
+            <p>Tennis</p>
+          </button>
+        </div>
+        <div>
+          <button className={darkMode ? "gameTypeDark" : "gameTypeLight"}>
+            <img src={virtualSport} alt="virtualSport" />
 
-          <p>Virtual Sports</p>
-        </button>
-        <button className={darkMode ? "gameTypeDark" : "gameTypeLight"}>
-          <MdOutlineSportsFootball />
-          <p>Sport-Book</p>
-        </button>
+            <p>Virtual Sports</p>
+          </button>
+        </div>
+        <div>
+          <button className={darkMode ? "gameTypeDark" : "gameTypeLight"}>
+            <MdOutlineSportsFootball />
+            <p>Sport-Book</p>
+          </button>
+        </div>
       </div>
       <div className="teenPatigame">
         <div>
@@ -190,14 +206,14 @@ const HeroSection = () => {
       </div>
       <div className="cricketSection">
         <div className="cricketHeading">
-          <MdOutlineSportsCricket />
-          <p>Cricket</p>
+          <MdSportsTennis />
+          <p>Tennis</p>
         </div>
         <div className="cricketContent">
           <div className="cricketContent1">
             <div className="inPlay">
               <div className="inPlayBtn">In-Play</div>
-              <p>Twenty20 Big Bash</p>
+              <p>Canterbury Magicians Woman Vs Wellington Blaze Wome</p>
             </div>
             <div className="cricketScore">
               <div className="blueScore">1.05</div>
@@ -240,14 +256,14 @@ const HeroSection = () => {
       </div>
       <div className="cricketSection">
         <div className="cricketHeading">
-          <MdOutlineSportsCricket />
-          <p>Cricket</p>
+          <MdOutlineSportsSoccer />
+          <p>Soccer</p>
         </div>
         <div className="cricketContent">
           <div className="cricketContent1">
             <div className="inPlay">
               <div className="inPlayBtn">In-Play</div>
-              <p>Twenty20 Big Bash</p>
+              <p>Canterbury Magicians Woman Vs Wellington Blaze Wome</p>
             </div>
             <div className="cricketScore">
               <div className="blueScore">1.05</div>
@@ -339,25 +355,37 @@ const HeroSection = () => {
           <p>Sports Book</p>
         </div>
         <div className="sportCard">
-          <div className="sportCard1">
-            <img src={sport1} alt="sport1" />
-            <h3>Teen Patti</h3>
+          <div className="div">
+            <div className="sportCard1">
+              <img src={sport1} alt="sport1" />
+              <h3>Teen Patti</h3>
+            </div>
           </div>
-          <div className="sportCard1">
-            <img src={sport2} alt="sport2" />
-            <h3>Table Tennis</h3>
+
+          <div className="div">
+            <div className="sportCard1">
+              <img src={sport2} alt="sport2" />
+              <h3>Table Tennis</h3>
+            </div>
           </div>
-          <div className="sportCard1">
-            <img src={sport3} alt="sport3" />
-            <h3>Rugby League</h3>
+
+          <div className="div">
+            <div className="sportCard1">
+              <img src={sport3} alt="sport3" />
+              <h3>Rugby League</h3>
+            </div>
           </div>
-          <div className="sportCard1">
-            <img src={sport4} alt="sport4" />
-            <h3>Chess</h3>
+          <div className="div">
+            <div className="sportCard1">
+              <img src={sport4} alt="sport4" />
+              <h3>Chess</h3>
+            </div>
           </div>
-          <div className="sportCard1">
-            <img src={sport5} alt="sport5" />
-            <h3>Badminton</h3>
+          <div className="div">
+            <div className="sportCard1">
+              <img src={sport5} alt="sport5" />
+              <h3>Badminton</h3>
+            </div>
           </div>
         </div>
       </div>
