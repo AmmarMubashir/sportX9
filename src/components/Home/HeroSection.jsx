@@ -177,7 +177,9 @@ const HeroSection = () => {
           <div className="cricketContent1">
             <div className="inPlay">
               <div className="inPlayBtn">In-Play</div>
-              <p>Twenty20 Big Bash</p>
+              <p className={darkMode ? "scoreDark" : "scoreLight"}>
+                Twenty20 Big Bash
+              </p>
             </div>
             <div className="cricketScore">
               <div className="blueScore">1.05</div>
@@ -191,7 +193,9 @@ const HeroSection = () => {
           <div className="cricketContent1">
             <div className="inPlay">
               <div className="inPlayBtn">In-Play</div>
-              <p>Canterbury Magicians Woman Vs Wellington Blaze Wome</p>
+              <p className={darkMode ? "scoreDark" : "scoreLight"}>
+                Canterbury Magicians Woman Vs Wellington Blaze Wome
+              </p>
             </div>
             <div className="cricketScore">
               <div className="blueScore">1.05</div>
@@ -213,7 +217,9 @@ const HeroSection = () => {
           <div className="cricketContent1">
             <div className="inPlay">
               <div className="inPlayBtn">In-Play</div>
-              <p>Canterbury Magicians Woman Vs Wellington Blaze Wome</p>
+              <p className={darkMode ? "scoreDark" : "scoreLight"}>
+                Canterbury Magicians Woman Vs Wellington Blaze Wome
+              </p>
             </div>
             <div className="cricketScore">
               <div className="blueScore">1.05</div>
@@ -227,7 +233,9 @@ const HeroSection = () => {
           <div className="cricketContent1">
             <div className="inPlay">
               <div className="inPlayBtn">In-Play</div>
-              <p>Canterbury Magicians Woman Vs Wellington Blaze Wome</p>
+              <p className={darkMode ? "scoreDark" : "scoreLight"}>
+                Canterbury Magicians Woman Vs Wellington Blaze Wome
+              </p>
             </div>
             <div className="cricketScore">
               <div className="blueScore">1.05</div>
@@ -241,7 +249,9 @@ const HeroSection = () => {
           <div className="cricketContent1">
             <div className="inPlay">
               <div className="inPlayBtn">In-Play</div>
-              <p>Canterbury Magicians Woman Vs Wellington Blaze Wome</p>
+              <p className={darkMode ? "scoreDark" : "scoreLight"}>
+                Canterbury Magicians Woman Vs Wellington Blaze Wome
+              </p>
             </div>
             <div className="cricketScore">
               <div className="blueScore">1.05</div>
@@ -263,7 +273,9 @@ const HeroSection = () => {
           <div className="cricketContent1">
             <div className="inPlay">
               <div className="inPlayBtn">In-Play</div>
-              <p>Canterbury Magicians Woman Vs Wellington Blaze Wome</p>
+              <p className={darkMode ? "scoreDark" : "scoreLight"}>
+                Canterbury Magicians Woman Vs Wellington Blaze Wome
+              </p>
             </div>
             <div className="cricketScore">
               <div className="blueScore">1.05</div>
@@ -277,7 +289,9 @@ const HeroSection = () => {
           <div className="cricketContent1">
             <div className="inPlay">
               <div className="inPlayBtn">In-Play</div>
-              <p>Canterbury Magicians Woman Vs Wellington Blaze Wome</p>
+              <p className={darkMode ? "scoreDark" : "scoreLight"}>
+                Canterbury Magicians Woman Vs Wellington Blaze Wome
+              </p>
             </div>
             <div className="cricketScore">
               <div className="blueScore">1.05</div>
@@ -293,7 +307,9 @@ const HeroSection = () => {
       <div className="topProvider">
         <div className="providerContent">
           <img src={topProvider} alt="topProvider" />
-          <p>Top Providers</p>
+          <p className={darkMode ? "contentDark" : "contentLight"}>
+            Top Providers
+          </p>
         </div>
         <div className="providerImg">
           <img src={provider1} alt="provider1" />
@@ -307,7 +323,9 @@ const HeroSection = () => {
       <div className="virtualSports">
         <div className="virtualSportContent">
           <img src={virtualSport} alt="virtualSport" />
-          <p>Virtual Sports</p>
+          <p className={darkMode ? "contentDark" : "contentLight"}>
+            Virtual Sports
+          </p>
         </div>
         <div className="virtualSportCards">
           <div className="card1">
@@ -351,8 +369,13 @@ const HeroSection = () => {
 
       <div className="sportBook">
         <div className="sportBookContent">
-          <img src={sportBook} alt="sportBook" />
-          <p>Sports Book</p>
+          {/* <img src={sportBook} alt="sportBook" /> */}
+          <MdOutlineSportsFootball
+            className={darkMode ? "contentDark" : "contentLight"}
+          />
+          <p className={darkMode ? "contentDark" : "contentLight"}>
+            Sports Book
+          </p>
         </div>
         <div className="sportCard">
           <div className="div">

@@ -240,9 +240,9 @@ button {
   gap: 10px;
   /* background: red; */
 }
-.inPlay p {
+/* .inPlay p {
   color: #ebc430;
-}
+} */
 .inPlayBtn {
   width: 80px;
   height: 50px;
@@ -272,6 +272,14 @@ button {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+.scoreDark {
+  color: #ebc430;
+  font-weight: bold;
+}
+.scoreLight {
+  color: black;
+  font-weight: bold;
 }
 .blueScore {
   background: #9db0e0;
@@ -307,11 +315,22 @@ button {
   justify-content: flex-start;
   align-items: center;
 }
-.providerContent p,
+/* .providerContent p,
 .virtualSportContent p,
 .sportBookContent p {
   font-size: 1.2rem;
   color: #ebc430;
+  font-weight: bold;
+} */
+
+.contentDark {
+  font-size: 1.2rem;
+  color: #ebc430;
+  font-weight: bold;
+}
+.contentLight {
+  font-size: 1.2rem;
+  color: black;
   font-weight: bold;
 }
 .providerImg img {
