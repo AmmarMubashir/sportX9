@@ -519,6 +519,50 @@ const HeroSection = () => {
           <img src={provider6} alt="provider6" />
         </div>
       </div>
+
+      <div className="sportBook">
+        <div className="sportBookContent">
+          {/* <img src={sportBook} alt="sportBook" /> */}
+          <MdOutlineSportsFootball
+            className={darkMode ? "contentDark" : "contentLight"}
+          />
+          <p className={darkMode ? "contentDark" : "contentLight"}>MIni Game</p>
+        </div>
+        <div className="sportCard">
+          <div className="div">
+            <div className="sportCard1">
+              <img src={sport1} alt="sport1" />
+              <h3>Teen Patti</h3>
+            </div>
+          </div>
+
+          <div className="div">
+            <div className="sportCard1">
+              <img src={sport2} alt="sport2" />
+              <h3>Table Tennis</h3>
+            </div>
+          </div>
+
+          <div className="div">
+            <div className="sportCard1">
+              <img src={sport3} alt="sport3" />
+              <h3>Rugby League</h3>
+            </div>
+          </div>
+          <div className="div">
+            <div className="sportCard1">
+              <img src={sport4} alt="sport4" />
+              <h3>Chess</h3>
+            </div>
+          </div>
+          <div className="div">
+            <div className="sportCard1">
+              <img src={sport5} alt="sport5" />
+              <h3>Badminton</h3>
+            </div>
+          </div>
+        </div>
+      </div>
       <div className="virtualSports">
         <div className="virtualSportContent">
           <img src={virtualSport} alt="virtualSport" />

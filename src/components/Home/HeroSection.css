@@ -712,6 +712,16 @@ button {
   .card1 {
     width: 120px;
   }
+  .providerImg {
+    overflow-x: auto;
+    scrollbar-width: none;
+    grid-gap: 2px;
+  }
+  .providerImg img {
+    padding: 0;
+    width: 120px;
+    /* background: red; */
+  }
   .disclaimer {
     width: 80%;
   }
